@@ -1,0 +1,45 @@
+#задача 0
+from random import randint
+def generate(n, m, random=False):
+  if random:
+    pass
+  else:
+    return [[0] * m] * n
+print(generate(3,3, False))
+
+
+
+
+from random import randint
+def generate(n,m, random=False):
+    if random:
+        return [[randint(1,15) for i in range(m)] for j in range(n)]
+    else:
+        return [[0] * m] * n
+print(generate(3,3,True))
+
+
+#задача 1
+from random import randint
+def generate(n, m, random=False):
+    if random:
+        return [[randint(1,15) for i in range(m)] for j in range(n)]
+    else:
+        return [[0] * m] * n
+x = generate(4, 6, True)
+
+
+def simple(matrix):
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if j > i:
+                matrix[i][j] = 2
+            elif i > j:
+                matrix[i][j] = 0
+            else:
+                matrix[i][j] = 1
+    return matrix
+
+y = simple(x)
+for i in y:
+    print(i)
