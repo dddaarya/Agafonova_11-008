@@ -1,0 +1,15 @@
+#1.py
+with open("Война_и_мир.txt") as file_handler:
+    for line in file_handler:
+        s = line.replace("Анна Павловна","Anna Pavlovna")
+        print(s)
+
+
+
+#2.py
+with open("Война_и_мир.txt") as file_handler:
+    lst = file_handler.readlines()
+    for i in range(len(lst)):
+        if lst[i].find('Princesse, ma parole') != -1:
+            print(i+1)
+            break
