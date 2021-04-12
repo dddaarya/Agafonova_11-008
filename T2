@@ -1,0 +1,19 @@
+string = 'Wazzzzzuuuup bro haw ware youuuozw Zupppawazup ooo www zuuuppzup wupaz wupaz zoooo wzauuuuuppp ppppuz waz zaw upppzwaa uu zwa zwa'
+def f(a,b):
+    f = True
+    for i in a:
+        if i not in b:
+            f = False
+
+    return f
+
+
+def func(str,alf='wazupWAZUP'):
+    lst = set(str)
+    if  len(str) > 5 and f(lst,alf):
+        return True
+
+lst = string.split(' ')
+func(lst[0])
+l_2 = list(filter(func,lst))
+print(l_2)
