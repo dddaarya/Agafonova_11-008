@@ -1,8 +1,6 @@
 import requests
 import re
 from urllib.request import Request, urlopen
-import wget
-# num_of_pics = input("Enter a number of doggies you want to download:\n")
 num_of_pics = int(input("Enter a number of doggies u want to download:\n"))
 url = "http://shibe.online/api/shibes?count=%d&urls=%s&httpsUrls=false"
 pic_urls = requests.get(url=url % (num_of_pics,"true")).json()
